@@ -1,12 +1,17 @@
+import { ReactNode } from 'react';
+
 export type RickValueProvider = {
   data: DataTypeContext[],
   columns: string[],
   filterList: FilterListType[],
+  // addFilter: (filter: FilterListType) => void,
+  // removeFilter: (info: string) => void,
+  // removeAllFilters: () => void,
 };
 
 export type RickProviderProps = {
-  children: React.ReactNode;
-};
+  children: ReactNode;
+}
 
 export type InfoType = 'name' | 'status' | 'species' | 'location' | 'origin';
 

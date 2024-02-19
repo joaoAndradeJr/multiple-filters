@@ -4,7 +4,7 @@ import { RickContext } from '../context/RickContext';
 import styles from './Filter.module.css';
 
 function Filter() {
-  const { columns } = useContext(RickContext);
+  const { columns, addFilter } = useContext(RickContext);
   const [formData, setFormData] = useState<FilterListType>({
     info: columns[0] as InfoType,
     value: '',
@@ -19,6 +19,7 @@ function Filter() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    addFilter(formData);
   };
 
   return (
@@ -54,7 +55,7 @@ function Filter() {
         </button>
         <button
           type="button"
-          disabled={ columns.length > 4 }
+          disabled={ columns.length > 5 }
           onClick={ () => {} }
         >
           Remove All

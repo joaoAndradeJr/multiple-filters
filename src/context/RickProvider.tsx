@@ -25,10 +25,15 @@ function RickProvider({ children }: RickProviderProps) {
         setData(characters)});
   }, []);
 
+  const addFilter = (filter) => {
+    setFilterList((prevState) => [...prevState, filter])
+  };
+
   const value = {
     data,
     columns,
     filterList,
+    addFilter,
   };
 
   return (
