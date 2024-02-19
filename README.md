@@ -1,6 +1,6 @@
 # Monitoria expositiva turma 37 - Multiplos filtros
 
-## Para usar a aplicação sega os passos a seguir:
+## Para usar a aplicação siga os passos a seguir:
 
 Clone o repositório
 
