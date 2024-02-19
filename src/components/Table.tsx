@@ -3,9 +3,16 @@ import { RickContext } from '../context/RickContext';
 import styles from './Table.module.css';
 
 function Table() {
-  const { data } = useContext(RickContext);
+  const { data, filterList } = useContext(RickContext);
 
-  const applyFilters = () => data;
+  const applyFilters = () => (
+    data.filter((character) => (
+      filterList.every(({ info, value }) => (
+        character[info].toLowerCase()
+          .includes(value.toLowerCase())
+      ))
+    ))
+  );
 
   return (
     <div className={ styles.listBox }>
