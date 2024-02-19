@@ -1,4 +1,4 @@
-# Monitoria expositiva turma 37 - Multipolos filtros
+# Monitoria expositiva turma 37 - Multiplos filtros
 
 ## Para usar a aplicação sega os passos a seguir:
 
